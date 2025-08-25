@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1jdqluacnewd"]
+[gd_scene load_steps=8 format=3 uid="uid://d1jdqluacnewd"]
 
 [ext_resource type="PackedScene" uid="uid://b0ugokjjv6wvl" path="res://Scenes/Player/player.tscn" id="1_h6rvd"]
+[ext_resource type="Script" uid="uid://cwii4m5msgc6r" path="res://Scripts/game_manager.gd" id="1_xdigk"]
 [ext_resource type="PackedScene" uid="uid://c4akcf073hves" path="res://Scenes/Enemies/enemy.tscn" id="2_fcrff"]
+[ext_resource type="PackedScene" uid="uid://ci6hvleb3anfg" path="res://Scenes/canvas_layer.tscn" id="4_rd413"]
 
 [sub_resource type="Environment" id="Environment_h6rvd"]
 background_mode = 3
@@ -16,6 +18,7 @@ glow_blend_mode = 1
 size = Vector2(20, 20.0626)
 
 [node name="TestLevel" type="Node2D"]
+script = ExtResource("1_xdigk")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 156)
@@ -111,3 +114,5 @@ one_way_collision = true
 
 [node name="Enemy" parent="." instance=ExtResource("2_fcrff")]
 position = Vector2(768, 386)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_rd413")]
