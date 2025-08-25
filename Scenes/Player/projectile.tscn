@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpk72wjywmhmt"]
+
+[ext_resource type="Script" uid="uid://ctyoo2q185rx7" path="res://Scripts/Player/projectile.gd" id="1_mhv6k"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mhv6k"]
+lightmap_size_hint = Vector2i(14, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mhv6k"]
+
+[node name="Projectile" type="Area2D"]
+script = ExtResource("1_mhv6k")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+scale = Vector2(6, 6)
+mesh = SubResource("BoxMesh_mhv6k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("RectangleShape2D_mhv6k")

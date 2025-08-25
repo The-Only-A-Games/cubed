@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfsto8ntclgdg"]
+
+[ext_resource type="Script" uid="uid://bur8embgfdr7y" path="res://Scenes/Enemies/enemy_gun.gd" id="1_dst7j"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_tgkoy"]
+
+[node name="EnemyGun" type="MeshInstance2D"]
+scale = Vector2(40, 12)
+mesh = SubResource("QuadMesh_tgkoy")
+script = ExtResource("1_dst7j")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0.525, 0)
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(15, 0)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://brbnp568p8ix1"]
+
+[ext_resource type="Shader" uid="uid://cj8vttgague5i" path="res://Shaders/gun.gdshader" id="1_dq3yv"]
+[ext_resource type="Script" uid="uid://dd8up5644gctf" path="res://Scripts/Player/gun.gd" id="1_ho3ce"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dq3yv"]
+shader = ExtResource("1_dq3yv")
+shader_parameter/base_color = Vector4(0.7, 0.7, 0.7, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_yqov1"]
+
+[node name="Gun" type="MeshInstance2D"]
+material = SubResource("ShaderMaterial_dq3yv")
+scale = Vector2(40, 12)
+mesh = SubResource("QuadMesh_yqov1")
+script = ExtResource("1_ho3ce")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0.55, 0)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://2rkpim2tre1r"]
+
+[ext_resource type="Script" uid="uid://cdaxtactm8t3b" path="res://Scripts/Enemies/enemy_projectile.gd" id="1_pdmx0"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_g33u6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g33u6"]
+
+[node name="EnemyProjectile" type="Area2D"]
+script = ExtResource("1_pdmx0")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+scale = Vector2(15, 15)
+mesh = SubResource("SphereMesh_g33u6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_g33u6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
