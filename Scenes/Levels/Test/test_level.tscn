@@ -110,4 +110,4 @@ shape = SubResource("RectangleShape2D_s6ied")
 one_way_collision = true
 
 [node name="Enemy" parent="." instance=ExtResource("2_fcrff")]
-position = Vector2(722, 335)
+position = Vector2(768, 386)
