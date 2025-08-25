@@ -7,6 +7,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_g33u6"]
 
 [node name="EnemyProjectile" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_pdmx0")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]

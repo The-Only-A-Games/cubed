@@ -6,13 +6,15 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xpcdj"]
 shader = ExtResource("1_xpcdj")
-shader_parameter/base_color = Vector4(0.1, 0.2, 0.6, 1)
+shader_parameter/base_color = Vector4(0, 0.4, 0.8, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_tugb3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uvnfx"]
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_uvnfx")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]

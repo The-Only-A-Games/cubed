@@ -17,7 +17,6 @@ func _physics_process(delta):
 	
 	if ray_cast.is_colliding():
 		var collider = ray_cast.get_collider()
-		print(collider)
 		if collider.is_in_group("player") and can_shoot:
 			_shoot()
 			print("hit player")

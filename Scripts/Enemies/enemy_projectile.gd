@@ -2,7 +2,7 @@ extends Area2D
 
 
 ## Projectile basic bullet
-const SPEED = 400.0
+const SPEED = 300.0
 const MAX_DISTANCE = 20.0
 var travelled_distance = 0.0
 

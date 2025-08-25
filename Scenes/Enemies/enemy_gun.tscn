@@ -14,6 +14,7 @@ position = Vector2(0.525, 0)
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(15, 0)
+collision_mask = 2
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

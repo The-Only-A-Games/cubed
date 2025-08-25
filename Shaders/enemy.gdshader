@@ -1,6 +1,6 @@
 shader_type canvas_item;
 // Main color
-uniform vec4 base_color = vec4(0.0, 0.4, 0.8, 1.0);
+uniform vec4 base_color = vec4(1.0, 0.0, 0.2, 1.0);
 
 void fragment(){
 	COLOR = base_color * 2.0;

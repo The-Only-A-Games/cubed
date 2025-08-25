@@ -1,6 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4akcf073hves"]
+[gd_scene load_steps=6 format=3 uid="uid://c4akcf073hves"]
 
 [ext_resource type="PackedScene" uid="uid://bfsto8ntclgdg" path="res://Scenes/Enemies/enemy_gun.tscn" id="1_613su"]
+[ext_resource type="Shader" uid="uid://bc6nk3fu3mw1d" path="res://Shaders/enemy.gdshader" id="1_jcvw6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x1rqp"]
+shader = ExtResource("1_jcvw6")
+shader_parameter/base_color = Vector4(1, 0, 0.2, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_3pdns"]
 
@@ -9,6 +14,7 @@
 [node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+material = SubResource("ShaderMaterial_x1rqp")
 scale = Vector2(60, 60)
 mesh = SubResource("QuadMesh_3pdns")
 

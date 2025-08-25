@@ -27,7 +27,7 @@ position = Vector2(364, 340)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_h6rvd")
 
-[node name="Platforms" type="Node2D" parent="."]
+[node name="Platforms" type="Node2D" parent="." groups=["obstacles"]]
 
 [node name="Floor" type="StaticBody2D" parent="Platforms"]
 position = Vector2(193, 301)
@@ -40,8 +40,10 @@ mesh = SubResource("BoxMesh_s6ied")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Floor"]
 position = Vector2(576, 506)
+rotation = 3.14159
 scale = Vector2(57.5834, -14.1117)
 shape = SubResource("RectangleShape2D_s6ied")
+one_way_collision = true
 
 [node name="Floor2" type="StaticBody2D" parent="Platforms"]
 position = Vector2(45, 270)
@@ -54,8 +56,10 @@ mesh = SubResource("BoxMesh_s6ied")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Floor2"]
 position = Vector2(576, 506)
+rotation = 3.14159
 scale = Vector2(57.5834, -14.1117)
 shape = SubResource("RectangleShape2D_s6ied")
+one_way_collision = true
 
 [node name="Floor3" type="StaticBody2D" parent="Platforms"]
 position = Vector2(415, 164)
@@ -68,8 +72,10 @@ mesh = SubResource("BoxMesh_s6ied")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Floor3"]
 position = Vector2(576, 506)
+rotation = 3.14159
 scale = Vector2(57.5834, -14.1117)
 shape = SubResource("RectangleShape2D_s6ied")
+one_way_collision = true
 
 [node name="Floor4" type="StaticBody2D" parent="Platforms"]
 position = Vector2(822, 256)
@@ -82,8 +88,10 @@ mesh = SubResource("BoxMesh_s6ied")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Floor4"]
 position = Vector2(576, 506)
+rotation = 3.14159
 scale = Vector2(57.5834, -14.1117)
 shape = SubResource("RectangleShape2D_s6ied")
+one_way_collision = true
 
 [node name="Floor5" type="StaticBody2D" parent="Platforms"]
 position = Vector2(703, 86)
@@ -96,8 +104,10 @@ mesh = SubResource("BoxMesh_s6ied")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Floor5"]
 position = Vector2(576, 506)
+rotation = 3.14159
 scale = Vector2(57.5834, -14.1117)
 shape = SubResource("RectangleShape2D_s6ied")
+one_way_collision = true
 
 [node name="Enemy" parent="." instance=ExtResource("2_fcrff")]
 position = Vector2(722, 335)
